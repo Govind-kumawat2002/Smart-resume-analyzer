@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            background: #ffffff30;
+            border: none;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .card-header {
+            background: transparent;
+            border-bottom: none;
+            text-align: center;
+        }
+
+        .card-header h3 {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .custom-file-upload {
+            border: 2px solid #fff;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: #ffffff30;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #fff;
+            color: #4e54c8;
+        }
+
+        .btn-primary {
+            background-color: #6c63ff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        .btn-primary:hover {
+            background-color: #4e54c8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-header">
+                        <h3>Upload Your Resume</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="resume" class="form-label">Paste Resume Text (Optional):</label>
+                                <textarea name="resume_text" id="resume_text" class="form-control" rows="4" placeholder="Paste your resume text here..."></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="resume" class="form-label">Or Choose a file (TXT, DOCX, PDF):</label>
+                                <input type="file" name="file" id="resume" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="feedback" class="form-label">Feedback (Optional):</label>
+                                <textarea name="feedback" id="feedback" class="form-control" rows="3" placeholder="Provide your feedback here..."></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Upload Resume</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Resume Analyzer. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
